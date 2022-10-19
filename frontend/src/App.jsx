@@ -1,14 +1,8 @@
-import Home from "@pages/Home";
-
 import "./App.css";
+import Buttons from "@components/filter/Buttons";
 
 function App() {
-  return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
-  );
+  return <Buttons />;
 }
 
 export default App;
