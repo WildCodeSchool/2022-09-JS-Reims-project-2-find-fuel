@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../../style/filter.css";
 
-const listFuels = [
+const fuelList = [
   { nameFuel: "gasoil", isClicked: false },
   { nameFuel: "gasoil +", isClicked: false },
   { nameFuel: "E98", isClicked: false },
@@ -12,10 +12,10 @@ const listFuels = [
 function Fuel(props) {
   const { nameFuel } = props;
   return (
-    <div className="fuelElement">
+    <li className="fuelElement">
       <h2>{nameFuel}</h2>
       <input type="checkbox" />
-    </div>
+    </li>
   );
 }
 
@@ -25,11 +25,11 @@ Fuel.propTypes = {
 
 function Fuels() {
   return (
-    <div className="conteneur">
-      {listFuels.map((fuel, index) => (
-        <Fuel index={index} nameFuel={fuel.nameFuel} />
+    <ul className="contener">
+      {fuelList.map((fuel) => (
+        <Fuel nameFuel={fuel.nameFuel} />
       ))}
-    </div>
+    </ul>
   );
 }
 export default Fuels;

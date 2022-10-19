@@ -1,8 +1,9 @@
-.conteneur{
+.contener{
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
 }
 .fuelElement{
     margin: 0.5rem;
