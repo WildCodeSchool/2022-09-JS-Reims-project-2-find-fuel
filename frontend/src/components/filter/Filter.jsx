@@ -1,6 +1,10 @@
 import React from "react";
-import "./style/filter.css";
-const Filter = () => {
+import "../../../style/filter.css";
+import Fuels from "./Fuels";
+import Buttons from "./Buttons";
+import Brands from "./Brands";
+
+function Filter() {
   return (
     <div>
       <Fuels />
@@ -8,5 +12,5 @@ const Filter = () => {
       <Brands />
     </div>
   );
-};
+}
 export default Filter;
