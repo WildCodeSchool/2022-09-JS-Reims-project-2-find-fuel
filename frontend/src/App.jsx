@@ -1,12 +1,10 @@
-import Home from "@pages/Home";
-
 import "./App.css";
+import FuelItems from "./components/ItemsList/FuelItems";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <FuelItems />
     </div>
   );
 }
