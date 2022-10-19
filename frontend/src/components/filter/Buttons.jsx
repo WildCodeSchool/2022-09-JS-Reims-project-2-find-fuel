@@ -1,14 +1,20 @@
 import React from "react";
-import "./style/filter.css";
+import "../../../style/filter.css";
 
-const Buttons = () => {
+function Buttons() {
   return (
-    <div>
-      <button type="button">Le moins cher</button>
-      <button type="button">Le plus proche</button>
-      <button type="button">Favoris</button>
+    <div className="buttonContainer">
+      <button type="button" className="filterButtons">
+        Le moins cher
+      </button>
+      <button type="button" className="filterButtons">
+        Le plus proche
+      </button>
+      <button type="button" className="filterButtons">
+        Favoris
+      </button>
     </div>
   );
-};
+}
 
 export default Buttons;
