@@ -1,3 +1,13 @@
+## Project FindFuel 
+L'objectif principal de ce projet est de simplifié la recherche de station essence à l'aide de notre application basé sur le filtrage des besoins de nos utlisateurs et l'utilisation d'une géolocalisation ce qui permet d'aller à l'essentiel en quelques secondes.
+
+
+
+
+
+
+
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
