@@ -1,0 +1,13 @@
+.conteneur{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fuelElement{
+    margin: 0.5rem;
+}
+.fuelElement h2{
+    font-size: 1rem;
+    width: max-content;
+}
