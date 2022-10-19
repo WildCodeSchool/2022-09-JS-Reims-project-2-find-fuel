@@ -1,0 +1,23 @@
+.icon{
+    width: 60px;
+    height: 35px;
+    margin-top: 0.4rem;
+    
+}
+.icon1{
+    width: 45px;
+    height: 45px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    border-radius: 6%;
+    height: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
