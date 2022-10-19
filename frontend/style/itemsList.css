@@ -1,6 +1,33 @@
-.FuelItems {
+.fuelItems {
+    display: flex;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 12px;
+   align-items: center;
+   justify-content: space-around;
+}
+.fuelListing {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;  
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    border: 2px solid black;
+    justify-content: center;
+}
+.stationsInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+}
+.favorite {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://via.placeholder.com/40');
+    background-size: 100%;
+    margin-top: 10px;
+}
+.StateStation {
+    margin-right: 8px;
 }
