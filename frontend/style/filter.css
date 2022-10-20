@@ -1,3 +1,14 @@
-.FuelItems {
+.contener{
     display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+.fuelElement{
+    margin: 0.5rem;
+}
+.fuelElement h2{
+    font-size: 1rem;
+    width: max-content;
 }
