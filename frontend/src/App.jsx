@@ -1,12 +1,11 @@
-import Home from "@pages/Home";
+import Fuels from "@components/filter/Fuels";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <Fuels />
     </div>
   );
 }
