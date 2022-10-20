@@ -1,5 +1,4 @@
 import Fuels from "@components/filter/Fuels";
-
 import "./App.css";
 
 function App() {
