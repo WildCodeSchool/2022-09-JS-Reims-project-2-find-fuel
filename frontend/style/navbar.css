@@ -1,16 +1,18 @@
 .icon{
-    width: 60px;
-    height: 35px;
+    width: 6rem;
+    height: 3rem;
     margin-top: 0.4rem;
     
 }
 .icon1{
-    width: 45px;
-    height: 45px;
+    width: 3rem;
+    height: 3rem;
 }
 header{
     display: flex;
     justify-content: space-between;
+    background-color: #24242a;
+
 }
 
 .search{
