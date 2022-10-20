@@ -3,10 +3,10 @@
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     font-size: 12px;
-   align-items: center;
-   justify-content: space-around;
+    align-items: center;
+    justify-content: space-around;
 }
-.fuelListing {
+.fuelSortingList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -29,5 +29,5 @@
     margin-top: 10px;
 }
 .StateStation {
-    margin-right: 8px;
+    margin: 8px;
 }

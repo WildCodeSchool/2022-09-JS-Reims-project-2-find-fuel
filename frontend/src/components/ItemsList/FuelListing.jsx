@@ -3,10 +3,10 @@ import "../../../style/itemsList.css";
 
 function FuelListing() {
   return (
-    <div>
+    <figure>
       <img src="https://via.placeholder.com/50" alt="Fuels" />
       <figcaption>--,--€</figcaption>
-    </div>
+    </figure>
   );
 }
 export default FuelListing;

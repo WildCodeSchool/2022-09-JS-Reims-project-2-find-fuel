@@ -6,10 +6,8 @@ import StationInfo from "./StationsInfo";
 function FuelItems() {
   return (
     <div className="fuelItems">
-      <div>
-        <StationInfo />
-      </div>
-      <div className="fuelListing">
+      <StationInfo />
+      <div className="fuelSortingList">
         <FuelListing />
         <FuelListing />
         <FuelListing />
