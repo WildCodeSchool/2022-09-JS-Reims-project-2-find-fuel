@@ -17,8 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "eslint": "^8.25.0",
-    "eslint-plugin-react": "^7.31.10",
     "husky": "^7.0.0"
   }
 }
