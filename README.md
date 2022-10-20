@@ -1,12 +1,5 @@
 ## Project FindFuel 
-L'objectif principal de ce projet est de simplifié la recherche de station essence à l'aide de notre application basé sur le filtrage des besoins de nos utlisateurs et l'utilisation d'une géolocalisation ce qui permet d'aller à l'essentiel en quelques secondes.
-
-
-
-
-
-
-
+L'objectif de ce projet est de simplifier la recherche de station essence à l'aide de notre application basée sur le filtrage des besoins de nos utlisateurs et de l'utilisation d'une géolocalisation, qui permettra d'aller à l'essentiel en quelques secondes.
 
 ## Concept
 
