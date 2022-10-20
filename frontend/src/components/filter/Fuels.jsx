@@ -27,7 +27,7 @@ function Fuels() {
   return (
     <ul className="contener">
       {fuelList.map((fuel) => (
-        <Fuel nameFuel={fuel.nameFuel} />
+        <Fuel key={fuel.nameFuel} nameFuel={fuel.nameFuel} />
       ))}
     </ul>
   );
