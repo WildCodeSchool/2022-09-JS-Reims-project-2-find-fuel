@@ -1,10 +1,10 @@
-import Fuels from "@components/filter/Fuels";
+import Leaflet from "@components/map/Leaflet";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Fuels />
+      <Leaflet />
     </div>
   );
 }
