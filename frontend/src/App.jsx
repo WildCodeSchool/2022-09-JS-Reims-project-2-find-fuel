@@ -1,10 +1,10 @@
-import Fuels from "@components/filter/Fuels";
+import Filter from "./components/filter/Filter";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Fuels />
+      <Filter />
     </div>
   );
 }
