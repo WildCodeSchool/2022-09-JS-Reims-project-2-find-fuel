@@ -1,6 +1,6 @@
 function Search() {
   return (
-    <div>
+    <div className="NavSearch">
       <input className="search" type="text" placeholder="Recherche" />
     </div>
   );

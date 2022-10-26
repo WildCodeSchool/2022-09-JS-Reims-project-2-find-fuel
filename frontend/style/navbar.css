@@ -1,25 +1,28 @@
 .icon{
     width: 6rem;
-    height: 3rem;
+    padding-top: 1rem;
     margin-top: 0.4rem;
     
 }
 .icon1{
     width: 3rem;
-    height: 3rem;
+    padding-top: 1rem;
 }
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #24242a;
+    background-color: #3589a7;
 
 }
 
 .search{
     border-radius: 6%;
     height: 2.4rem;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.NavSearch{
+    padding-top: 1rem;
 }
