@@ -1,4 +1,3 @@
-
 import Filter from "./components/filter/Filter";
 import NavBar from "./components/navbar/NavBar";
 import Fuels from "./components/filter/Fuels";
