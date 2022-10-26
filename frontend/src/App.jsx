@@ -1,6 +1,6 @@
 import NavBar from "./components/navbar/NavBar";
 import Fuels from "./components/filter/Fuels";
-import FuelItems from "./components/ItemsList/FuelItems"
+import FuelItems from "./components/ItemsList/FuelItems";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 
