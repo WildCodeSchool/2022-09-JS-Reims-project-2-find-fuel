@@ -1,0 +1,27 @@
+.buttonContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.filterButtons{
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: white;
+}
+
+.contener{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+
+}
+.fuelElement {
+  margin: 0.5rem;
+}
+.fuelElement h2 {
+  font-size: 1rem;
+  width: max-content;
+}
+
