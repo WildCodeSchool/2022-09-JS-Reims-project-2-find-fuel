@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 
-const geolocation =
-  "https://api-adresse.data.gouv.fr/reverse/?lon=4.019932&lat=49.2571245";
 function Search() {
-  const [message, setMessage] = useState(geolocation);
+  const [city, setCity] = useState("");
   return (
     <div className="nav-search">
       <input
+        value={city}
         className="search"
         type="text"
         placeholder="Recherche"
-        onChange={(event) => setMessage(event.target.value)}
+        onChange={(event) => setCity(event.target.value)}
       />
-      <p>returned data from input:{message}</p>
     </div>
   );
 }
