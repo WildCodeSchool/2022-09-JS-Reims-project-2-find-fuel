@@ -7,12 +7,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <FuelItems />
       <Fuels />
       <Leaflet />
       <Station />
-      <Station />
-      <Station />
+      <NavBar />
     </div>
   );
 }
