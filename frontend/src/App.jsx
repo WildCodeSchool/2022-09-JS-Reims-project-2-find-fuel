@@ -6,9 +6,9 @@ import FuelItems from "./components/ItemsList/FuelItems";
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <FuelItems />
       <Fuels />
+      <NavBar />
     </div>
   );
 }
