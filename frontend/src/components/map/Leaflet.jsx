@@ -1,6 +1,9 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import PropTypes from "prop-types";
 
-function Leaflet() {
+function Leaflet(props) {
+  const { fuelList } = props;
+
   return (
     <MapContainer
       center={[49.259037, 4.031781]}
@@ -16,8 +19,17 @@ function Leaflet() {
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
+      {fuelList.map((fuel) => (
+        <Marker key={fuel.fields.id} position={fuel.fields.geom}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      ))}{" "}
     </MapContainer>
   );
 }
-
+Leaflet.propTypes = {
+  fuelList: PropTypes.arrayOf.isRequired,
+};
 export default Leaflet;
