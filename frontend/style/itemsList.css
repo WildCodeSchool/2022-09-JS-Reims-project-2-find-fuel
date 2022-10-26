@@ -1,32 +1,56 @@
-.fuelItems {
-  display: flex;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  font-size: 12px;
-  align-items: center;
-  justify-content: space-around;
-}
-.fuelSortingList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  align-items: center;
-  border: 2px solid black;
-  justify-content: center;
-}
-.stationsInfo {
+
+.station{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  border: 1px solid black;
+  font-size:x-small;
 }
-.favorite {
-  width: 40px;
-  height: 40px;
-  background-image: url("https://via.placeholder.com/40");
-  background-size: 100%;
-  margin-top: 10px;
+
+.stationInfo{
+  display: flex;
+  flex-direction: column;
+  
+  
 }
-.StateStation {
-  margin: 8px;
+.imageAndState{
+  display: flex;
+  justify-content: space-around ;
+}
+
+.nameStation{
+
+  display: flex;
+  justify-content: space-around;
+
+}
+.adressStation{
+  display: flex;
+  justify-content: center;
+}
+
+.fuelListing{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  
+ }
+.fuelListing{
+  display: flex;
+  align-items: center;
+}
+.figure{
+  margin: 5px;
+  height: auto;
+}
+
+.eltListing{
+  display:flex;
+  align-items:stretch;
+}
+
+.imageFavorite{
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
 }
