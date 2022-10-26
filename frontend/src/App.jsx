@@ -1,7 +1,7 @@
 import NavBar from "./components/navbar/NavBar";
 import Fuels from "./components/filter/Fuels";
+import Leaflet from "@components/map/Leaflet";
 import "./App.css";
-import FuelItems from "./components/ItemsList/FuelItems";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <NavBar />
       <FuelItems />
       <Fuels />
+      <Leaflet />
     </div>
   );
 }
