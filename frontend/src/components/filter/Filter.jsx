@@ -5,7 +5,7 @@ import Buttons from "./Buttons";
 
 function Filter() {
   return (
-    <div className="contenerFilter">
+    <div className="containerFilter">
       <Fuels />
       <Buttons />
     </div>
