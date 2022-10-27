@@ -7,9 +7,7 @@ function Station() {
   return (
     <div className="station">
       <StationInfo />
-      <div className="eltListing">
-        <FuelListing />
-      </div>
+      <FuelListing />
     </div>
   );
 }

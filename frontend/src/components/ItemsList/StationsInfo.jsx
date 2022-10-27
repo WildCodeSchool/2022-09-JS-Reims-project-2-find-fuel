@@ -3,7 +3,7 @@ import "../../../style/itemsList.css";
 
 function StationInfo() {
   return (
-    <div className="stationInfo">
+    <section className="stationInfo">
       <section className="nameStation">
         <h2>Name Station</h2>
         <div className="favorite">
@@ -21,21 +21,21 @@ function StationInfo() {
           alt="images"
         />
         <div className="stateStation">
-          <h2>6.8 Km</h2>
-          <h3>
+          <figure>
             <img
               className="imageState"
               src="https://via.placeholder.com/20"
               alt="state"
             />
-            Ouvert
-          </h3>
+            <figcaption>6.8 KM</figcaption>
+            <figcaption>Ouvert</figcaption>
+          </figure>
         </div>
       </section>
       <div className="adressStation">
         <h3>adresse</h3>
       </div>
-    </div>
+    </section>
   );
 }
 
