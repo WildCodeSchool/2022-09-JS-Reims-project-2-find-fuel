@@ -2,7 +2,7 @@ function Search() {
   return (
     <div className="bg-gray-100 flex justify-center items-center px-15">
       <div className="space-y-10">
-        <div className="flex items-center p-6 space-x-6 bg-[#3589a7]  transition duration-500">
+        <div className="flex items-center p-6 space-x-6 bg-[#3589a7] ">
           <div className="flex bg-gray-100 p-4 w-72 space-x-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"

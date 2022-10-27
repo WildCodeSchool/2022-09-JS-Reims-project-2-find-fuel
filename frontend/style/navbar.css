@@ -1,9 +1,8 @@
 
 .icon{
-    width: 10rem;
+    width: 5rem;
     padding-top: 1rem;
     margin-top: 0.4rem;
-    
 }
 .icon1{
     width: 3rem;
@@ -15,14 +14,6 @@ header{
     background-color: #3589a7;
 }
 
-.search{
-    border-radius: 6%;
-    height: 2.4rem;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.NavSearch{
+.nav-search{
     padding-top: 1rem;
 }
