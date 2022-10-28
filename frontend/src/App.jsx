@@ -1,3 +1,4 @@
+import Filter from "./components/filter/Filter";
 import NavBar from "./components/navbar/NavBar";
 import Fuels from "./components/filter/Fuels";
 import Station from "./components/ItemsList/Station";
@@ -7,6 +8,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <Filter />
       <Fuels />
       <Leaflet />
       <Station />
