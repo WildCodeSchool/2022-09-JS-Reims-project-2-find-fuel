@@ -1,3 +1,5 @@
+import React from "react";
+
 function Search() {
   return (
     <form className="bg-gray-100 space-y-10 flex justify-center items-center">
