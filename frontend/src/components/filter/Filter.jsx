@@ -2,14 +2,12 @@ import React from "react";
 import "../../../style/filter.css";
 import Fuels from "./Fuels";
 import Buttons from "./Buttons";
-import Brands from "./Brands";
 
 function Filter() {
   return (
-    <div>
+    <div className="containerFilter">
       <Fuels />
       <Buttons />
-      <Brands />
     </div>
   );
 }
