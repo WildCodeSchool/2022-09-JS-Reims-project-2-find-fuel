@@ -49,6 +49,7 @@ function Search() {
           </div>
         </div>
       </div>
+    </div>
   );
 }
 export default Search;
