@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../style/itemsList.css";
 
-function StationInfo() {
+function StationsInfo() {
   return (
     <section className="stationInfo">
       <section className="nameStation">
@@ -39,4 +39,4 @@ function StationInfo() {
   );
 }
 
-export default StationInfo;
+export default StationsInfo;
