@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function Search() {
-  const [city, setCity] = useState("");
   return (
     <div className="bg-gray-100 flex justify-center items-center">
       <div className="space-y-10">
@@ -50,15 +49,6 @@ function Search() {
           </div>
         </div>
       </div>
-    <div className="nav-search">
-      <input
-        value={city}
-        className="search"
-        type="text"
-        placeholder="Recherche"
-        onChange={(event) => setCity(event.target.value)}
-      />
-    </div>
   );
 }
 export default Search;
