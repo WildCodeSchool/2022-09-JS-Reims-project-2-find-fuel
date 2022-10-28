@@ -30,6 +30,13 @@ function Leaflet(props) {
   );
 }
 Leaflet.propTypes = {
-  fuelList: PropTypes.arrayOf.isRequired,
+  fuelList: PropTypes.arrayOf(
+    PropTypes.shape({
+      fields: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        geom: PropTypes.arrayOf(PropTypes.numbers).isRequired,
+      }).isRequired,
+    })
+  ).isRequired,
 };
 export default Leaflet;
