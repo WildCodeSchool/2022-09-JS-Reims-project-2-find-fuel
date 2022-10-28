@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div className="App">
-
       <FuelItems />
       <Fuels />
       <Leaflet />
@@ -30,7 +29,6 @@ function App() {
       <FuelItems />
       <Fuels />
       <Leaflet fuelList={fuelList} />
-
       <NavBar />
     </div>
   );
