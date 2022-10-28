@@ -1,12 +1,12 @@
 function Search() {
   return (
-    <div className="bg-gray-100 flex justify-center items-center px-15">
+    <div className="bg-gray-100 flex justify-center items-center">
       <div className="space-y-10">
-        <div className="flex items-center p-6 space-x-6 bg-[#3589a7] ">
-          <div className="flex bg-gray-100 p-4 w-72 space-x-4 rounded-lg">
+        <div className="flex items-center p-1 space-x-6 bg-[#3589a7] ">
+          <div className="flex bg-gray-100 p-4 px-0 w-30 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 opacity-30"
+              className=" w-1 opacity-30"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -19,12 +19,12 @@ function Search() {
               />
             </svg>
             <input
-              className="bg-gray-100 outline-none"
+              className="bg-gray-100 outline-none w-20"
               type="text"
               placeholder="Rechercher"
             />
           </div>
-          <div className="flex py-3 px-4 rounded-lg text-white font-semibold cursor-pointer">
+          <div className="flex py-3 px-2 rounded-lg text-white font-semibold cursor-pointer">
             <span>Filtre</span>
 
             <svg
