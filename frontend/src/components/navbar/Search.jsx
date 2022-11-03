@@ -11,7 +11,7 @@ function Search(props) {
   }
   return (
     <form className="nav-search" onSubmit={(e) => handleClick(e)}>
-            <input
+      <input
         name="city"
         value={city}
         className="search"
@@ -37,7 +37,6 @@ function Search(props) {
           />{" "}
         </svg>
       </button>
-
     </form>
   );
 }
