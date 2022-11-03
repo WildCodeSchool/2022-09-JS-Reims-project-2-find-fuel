@@ -29,7 +29,7 @@ function Leaflet(props) {
             {fuel.carburants.map((elt) => {
               const date = new Date(elt.date);
               return (
-                <tr>
+                <tr key={elt.carburant}>
                   <td>{elt.carburant}</td>
                   <td>{elt.prix} €</td>
                   <td>{`${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}</td>
@@ -47,7 +47,7 @@ Leaflet.propTypes = {
     PropTypes.shape({
       adresse: PropTypes.string.isRequired,
       ville: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       geom: PropTypes.arrayOf(PropTypes.number).isRequired,
       carburants: PropTypes.arrayOf(
         PropTypes.shape({
