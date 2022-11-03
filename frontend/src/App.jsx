@@ -11,14 +11,6 @@ function App() {
       <Leaflet />
       <Station />
       <Station />
-      <Station />
-      <Station />
-      <Station />
-      <Station />
-      <Station />
-      <Station />
-      <Station />
-      <Station />
       <NavBar />
     </div>
   );

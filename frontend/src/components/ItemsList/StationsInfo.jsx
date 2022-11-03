@@ -4,37 +4,19 @@ import "../../../style/itemsList.css";
 function StationsInfo() {
   return (
     <div className="stationInfo">
-      <figure className="nameStation">
-        <h2>Name Station</h2>
-        <figure className="favorite">
-          <img
-            className="imageFavorite"
-            src="https://via.placeholder.com/20"
-            alt="state"
-          />
-        </figure>
-      </figure>
-      <section className="imageAndState">
-        <img
-          className="imageStation"
-          src="https://via.placeholder.com/100"
-          alt="images"
-        />
-        <div className="stateStation">
-          <figure>
-            <img
-              className="imageState"
-              src="https://via.placeholder.com/20"
-              alt="state"
-            />
-            <figcaption>6.8 KM</figcaption>
-            <figcaption>Ouvert</figcaption>
-          </figure>
-        </div>
-      </section>
-      <div className="adressStation">
-        <h3>adresse</h3>
-      </div>
+      <h2 className="nameStation">Name Station</h2>
+      <img
+        className="imageFavorite"
+        src="https://via.placeholder.com/20"
+        alt="state"
+      />
+
+      <p className="stateStation">6.8 KM</p>
+      <p>
+        <span className="circleColor" />
+        Ouvert
+      </p>
+      <h3 className="adressStation">adresse</h3>
     </div>
   );
 }

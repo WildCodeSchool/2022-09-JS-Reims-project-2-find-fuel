@@ -7,25 +7,10 @@
 }
 
 .stationInfo{
-  display: flex;
-  flex-direction: column;
+  position:relative;
+  display: grid;
   }
-
-.imageAndState{
-  display: flex;
-  justify-content: space-around ;
-}
-
-.nameStation{
-  display: flex;
-  justify-content: space-around;
-}
-
-.adressStation{
-  display: flex;
-  justify-content: center;
-}
-
+  
 .fuelListing{
   display: flex;
   justify-content: space-between;
@@ -43,7 +28,17 @@
 }
 
 .imageFavorite{
-  display: flex;
-  justify-content: center;
-  margin-top: 8px;
+  height: 20px;
+  width: 20px;
+  position:absolute;
+  right: 0px;
+}
+
+.circleColor{
+  height: 20px;
+  width: 20px;
+  background-color: rgb(49, 147, 41);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
 }
