@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Filter from "./components/filter/Filter";
 import NavBar from "./components/navbar/NavBar";
-import Station from "./components/ItemsList/Station";
+import StationListing from "./components/ItemsList/StationListing";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 
@@ -23,8 +23,7 @@ function App() {
     <div className="App">
       <Filter />
       <Leaflet fuelList={fuelList} />
-      <Station />
-      <Station />
+      <StationListing />
       <NavBar />
     </div>
   );
