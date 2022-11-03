@@ -1,14 +1,14 @@
 import axios from "axios";
 
 let data;
-function trieData() {
-  const dataTried = [];
+function sortData() {
+  const dataSort = [];
 
   data.forEach((fuel) => {
-    const index = dataTried.findIndex((elt) => elt.id === fuel.fields.id);
+    const index = dataSort.findIndex((elt) => elt.id === fuel.fields.id);
 
     if (index < 0) {
-      dataTried.push({
+      dataSort.push({
         id: fuel.fields.id,
         adresse: fuel.fields.adresse,
         ville: fuel.fields.ville,
@@ -23,7 +23,7 @@ function trieData() {
         ],
       });
     } else {
-      dataTried[index].carburants.push({
+      dataSort[index].carburants.push({
         carburant: fuel.fields.prix_nom,
         carburantId: fuel.fields.prix_id,
         prix: fuel.fields.prix_valeur,
@@ -31,12 +31,12 @@ function trieData() {
       });
     }
   });
-  return dataTried;
+  return dataSort;
 }
 function getData(url, setData) {
   axios.get(url).then((response) => {
     data = response.data.records;
-    setData(trieData());
+    setData(sortData());
   });
 }
 export default getData;
