@@ -8,9 +8,12 @@
     padding-top: 1rem;
 }
 header{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: #3589a7;
+    bottom: 0;
+    width: 100vw;
 }
 
 .search{
