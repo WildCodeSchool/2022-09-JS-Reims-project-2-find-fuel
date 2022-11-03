@@ -22,9 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      <FuelItems />
-      <Fuels />
-      <Leaflet />
       <Filter />
       <FuelItems />
       <Fuels />

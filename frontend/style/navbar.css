@@ -1,19 +1,48 @@
 
 .icon{
     width: 5rem;
-    padding-top: 1rem;
-    margin-top: 0.4rem;
+    padding: 0.3rem;
+    --margin: 0.4rem;
 }
 .icon1{
     width: 3rem;
     padding-top: 1rem;
 }
 header{
+    padding: 0.4rem;
     display: flex;
     justify-content: space-between;
     background-color: #3589a7;
+    align-content: center;
 }
 
 .nav-search{
     padding-top: 1rem;
+}
+header form{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+header form input{
+    box-shadow: 3px 3px 10px black;
+    border-radius: 10px;
+    padding : 0.2rem;
+    width: 45%;
+    outline: none;
+}
+
+.button_filter svg{
+    display: inline;
+    margin-left: 3px;
+}
+header button{
+    box-shadow: 3px 3px 10px black;
+    border-radius: 15px;
+    border: 1px solid #265364;
+    color: white;
+    border-radius: 10px;
+    padding: 0.2rem;
 }
