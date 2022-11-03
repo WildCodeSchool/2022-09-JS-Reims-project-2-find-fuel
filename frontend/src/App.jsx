@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Filter from "./components/filter/Filter";
 import NavBar from "./components/navbar/NavBar";
-import Fuels from "./components/filter/Fuels";
 import FuelItems from "./components/ItemsList/FuelItems";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
@@ -22,7 +21,6 @@ function App() {
     <div className="App">
       <Filter />
       <FuelItems />
-      <Fuels />
       <Leaflet fuelList={fuelList} />
       <NavBar setVille={setCity} />
     </div>

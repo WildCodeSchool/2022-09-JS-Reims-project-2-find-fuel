@@ -3,9 +3,13 @@ import "../../../style/filter.css";
 import Fuels from "./Fuels";
 import Buttons from "./Buttons";
 
+const notVisible = true;
+
 function Filter() {
   return (
-    <div className="containerFilter">
+    <div
+      className={notVisible ? "containerFilter notVisible" : "containerFilter"}
+    >
       <Fuels />
       <Buttons />
     </div>
