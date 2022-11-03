@@ -10,7 +10,6 @@ function StationsInfo() {
         src="https://via.placeholder.com/20"
         alt="state"
       />
-
       <p className="stateStation">6.8 KM</p>
       <p>
         <span className="circleColor" />
