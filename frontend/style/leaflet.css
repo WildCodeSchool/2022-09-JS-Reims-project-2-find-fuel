@@ -1,12 +1,12 @@
-.popup td{
-padding: 1rem 0.2rem;
-width: 33%;
-border-bottom: 1px solid black;
+.popup td {
+  padding: 1rem 0.2rem;
+  width: 33%;
+  border-bottom: 1px solid black;
 }
 
-tr th{
-    padding: 0.3rem;
+tr th {
+  padding: 0.3rem;
 }
-.popup{
-    width: max-content;
+.popup {
+  width: max-content;
 }

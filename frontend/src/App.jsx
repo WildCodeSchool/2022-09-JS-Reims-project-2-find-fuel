@@ -7,8 +7,6 @@ import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 import getData from "./data/api";
 
-// const ville = "reims";
-
 function App() {
   const [fuelList, setFuelList] = useState([]);
   const [city, setCity] = useState("reims");
