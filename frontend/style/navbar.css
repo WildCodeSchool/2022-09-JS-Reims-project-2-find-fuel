@@ -1,29 +1,60 @@
-.icon{
-    width: 6rem;
-    padding-top: 1rem;
-    margin-top: 0.4rem;
+.icon {
+  width: 3rem;
+  padding: 0.3rem;
+  --margin: 0.4rem;
 }
-.icon1{
-    width: 3rem;
-    padding-top: 1rem;
+.icon1 {
+  width: 3rem;
+  padding-top: 1rem;
 }
-header{
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    background-color: #3589a7;
-    bottom: 0;
-    width: 100vw;
-}
-
-.search{
-    border-radius: 6%;
-    height: 2.4rem;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+header {
+  padding: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3589a7;
+  align-content: center;
+  position: sticky;
 }
 
-.nav-search{
-    padding-top: 1rem;
+.search {
+  border-radius: 6%;
+  height: 2.4rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-search {
+  padding-top: 1rem;
+}
+header form {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+header form input {
+  box-shadow: 3px 3px 10px black;
+  border-radius: 10px;
+  padding: 0.2rem;
+  width: 45%;
+  outline: none;
+}
+.button_filter {
+  display: flex;
+}
+.button_filter svg {
+  display: inline;
+  margin-left: 3px;
+}
+header button {
+  box-shadow: 3px 3px 10px black;
+  border-radius: 15px;
+  border: 1px solid #265364;
+  color: white;
+  background-color: #3589a7;
+  border-radius: 10px;
+  padding: 0.2rem;
 }
