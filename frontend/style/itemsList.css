@@ -1,40 +1,39 @@
-
-.station{
+.station {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid black;
-  font-size:x-small;
+  font-size: x-small;
 }
 
-.stationInfo{
-  position:relative;
+.stationInfo {
+  position: relative;
   display: grid;
-  }
-  
-.fuelListing{
+}
+
+.fuelListing {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   border: 1px solid black;
-  }
+}
 
-.fuelListing{
+.fuelListing {
   display: flex;
   align-items: center;
 }
-.figure{
+.figure {
   margin: 5px;
   height: auto;
 }
 
-.imageFavorite{
+.imageFavorite {
   height: 20px;
   width: 20px;
-  position:absolute;
+  position: absolute;
   right: 0px;
 }
 
-.circleColor{
+.circleColor {
   height: 20px;
   width: 20px;
   background-color: rgb(49, 147, 41);
