@@ -3,6 +3,7 @@
     --colorSecondary : #09ace7;
 }
 .containerFilter{
+    display: none;
     width: calc(100vw - 2rem);
     margin: 1rem;
     position: absolute;

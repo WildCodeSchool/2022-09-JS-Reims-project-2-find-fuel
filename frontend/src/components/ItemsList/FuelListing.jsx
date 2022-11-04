@@ -1,12 +1,17 @@
 import React from "react";
 import "../../../style/itemsList.css";
+import FuelItem from "./FuelItem";
 
 function FuelListing() {
   return (
-    <figure>
-      <img src="https://via.placeholder.com/50" alt="Fuels" />
-      <figcaption>--,--€</figcaption>
-    </figure>
+    <div className="fuelListing">
+      <FuelItem />
+      <FuelItem />
+      <FuelItem />
+      <FuelItem />
+      <FuelItem />
+      <FuelItem />
+    </div>
   );
 }
 export default FuelListing;

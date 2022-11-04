@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Filter from "./components/filter/Filter";
 import NavBar from "./components/navbar/NavBar";
-import Fuels from "./components/filter/Fuels";
-import FuelItems from "./components/ItemsList/FuelItems";
+import StationListing from "./components/ItemsList/StationListing";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 import getData from "./data/api";
@@ -31,9 +30,8 @@ function App() {
   return (
     <div className="App">
       <Filter />
-      <FuelItems />
-      <Fuels />
       <Leaflet fuelList={fuelList} />
+      <StationListing />
       <NavBar setVille={setCity} />
       {location.loaded
         ? `Ta latitude : ${location.coordinates.lat} \n Ta longitude : ${location.coordinates.lng} \n Ta ville :${city} `
