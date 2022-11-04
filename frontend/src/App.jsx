@@ -20,13 +20,17 @@ function App() {
   }, [city]);
 
   const location = Geolocation();
-  if (location.loaded) {
-    axios
-      .get(
-        `https://api-adresse.data.gouv.fr/reverse/?lon=${location.coordinates.lng}&lat=${location.coordinates.lat}`
-      )
-      .then((response) => setCity(response.data.features["0"].properties.city));
-  }
+  React.useEffect(() => {
+    if (location.loaded) {
+      axios
+        .get(
+          `https://api-adresse.data.gouv.fr/reverse/?lon=${location.coordinates.lng}&lat=${location.coordinates.lat}`
+        )
+        .then((response) =>
+          setCity(response.data.features["0"].properties.city)
+        );
+    }
+  });
   return (
     <div className="App">
       <Filter />

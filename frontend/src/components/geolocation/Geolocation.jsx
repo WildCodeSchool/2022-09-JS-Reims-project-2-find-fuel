@@ -20,7 +20,7 @@ function Geolocation() {
 
   const onError = (error) => {
     setLocation({
-      loaded: true,
+      loaded: false,
       error,
     });
   };
@@ -31,8 +31,9 @@ function Geolocation() {
         code: 0,
         message: "Geolocation not supported",
       });
+    } else {
+      navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
   }, []);
   return location;
 }
