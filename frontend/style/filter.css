@@ -27,7 +27,7 @@
   background-color: var(--colorSecondary);
   color: var(--colorPrimary);
 }
-.contener {
+.container {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;

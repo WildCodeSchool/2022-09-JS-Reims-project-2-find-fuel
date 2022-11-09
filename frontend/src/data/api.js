@@ -37,7 +37,7 @@ function sortData() {
   return dataSort;
 }
 
-function avreage() {
+function average() {
   const sum = (station) => {
     let somme = 0;
     const num = station.carburants.length;
@@ -56,7 +56,7 @@ function avreage() {
 }
 
 function sortAverage() {
-  avreage();
+  average();
   dataSort = dataSort.sort((a, b) => {
     return a.moyenne - b.moyenne;
   });

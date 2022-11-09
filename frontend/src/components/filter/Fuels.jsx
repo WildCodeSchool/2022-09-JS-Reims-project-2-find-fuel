@@ -25,7 +25,7 @@ Fuel.propTypes = {
 
 function Fuels() {
   return (
-    <ul className="contener">
+    <ul className="container">
       {fuelList.map((fuel) => (
         <Fuel key={fuel.nameFuel} nameFuel={fuel.nameFuel} />
       ))}
