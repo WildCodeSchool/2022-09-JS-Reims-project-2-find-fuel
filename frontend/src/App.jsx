@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <Filter />
       <Leaflet fuelList={fuelList} />
-      <StationListing />
+      <StationListing fuelList={fuelList} />
       <NavBar setVille={setCity} />
       {location.loaded
         ? `Ta latitude : ${location.coordinates.lat} \n Ta longitude : ${location.coordinates.lng} \n Ta ville :${city} `
