@@ -41,3 +41,14 @@
   display: inline-block;
   margin-right: 5px;
 }
+
+.visible {
+  display: initial;
+  height: 100%;
+  overflow: auto;
+  height: 89vh;
+}
+
+.notVisible {
+  display: none;
+}
