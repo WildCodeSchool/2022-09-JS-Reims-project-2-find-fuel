@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Station from "./Station";
+import "../../../style/itemsList.css";
 
 function StationListing(props) {
   const { fuelList } = props;
@@ -27,5 +28,4 @@ StationListing.propTypes = {
     }).isRequired
   ).isRequired,
 };
-
 export default StationListing;

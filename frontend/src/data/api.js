@@ -1,8 +1,10 @@
 import axios from "axios";
 
 let data;
+let dataSort;
+
 function sortData() {
-  const dataSort = [];
+  dataSort = [];
 
   data.forEach((fuel) => {
     const index = dataSort.findIndex((elt) => elt.id === fuel.fields.id);
@@ -33,10 +35,17 @@ function sortData() {
   });
   return dataSort;
 }
-function getData(url, setData) {
+
+function getGeom(city) {
+  let ville = dataSort.find((elt) => (elt.ville = city));
+  return ville.geom;
+}
+
+function getData(url, setData, city, setPointGeo) {
   axios.get(url).then((response) => {
     data = response.data.records;
     setData(sortData());
+    setPointGeo(getGeom(city));
   });
 }
 export default getData;
