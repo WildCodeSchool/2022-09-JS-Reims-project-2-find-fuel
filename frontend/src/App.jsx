@@ -16,6 +16,7 @@ function App() {
   const eventFilterButton = () => {
     setIsShown(!isShown);
   };
+  const [visible, setVisible] = useState(false);
 
   const row = 200;
   const url = `https://data.economie.gouv.fr/api/records/1.0/search/?dataset=prix-carburants-fichier-instantane-test-ods-copie&q=${city}&rows=${row}&facet=id&facet=adresse&facet=ville&facet=prix_maj&facet=prix_nom&facet=services_service&facet=horaires_automate_24_24&refine.prix_maj=2022`;
@@ -23,6 +24,14 @@ function App() {
   React.useEffect(() => {
     getData(url, setFuelList);
   }, [city]);
+
+  function changeView() {
+    if (visible) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+  }
 
   const location = Geolocation();
   if (location.loaded) {
@@ -37,8 +46,12 @@ function App() {
       {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
       <Filter />
       <Leaflet fuelList={fuelList} />
-      <StationListing />
+      <StationListing visible={visible} />
       <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
+      <button type="button" onClick={() => changeView()}>
+        {visible ? "⇩" : "⇧"}
+      </button>
+
       {location.loaded
         ? `Ta latitude : ${location.coordinates.lat} \n Ta longitude : ${location.coordinates.lng} \n Ta ville :${city} `
         : "Location data not available yet"}
