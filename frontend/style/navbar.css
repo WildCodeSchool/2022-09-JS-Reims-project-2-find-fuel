@@ -17,13 +17,15 @@ header {
 }
 
 .search {
-  border-radius: 6%;
+  border-radius: 50px;
   height: 2.4rem;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  flex: 1 ;
+  border: 0;
+  outline: none;
 }
-
 .nav-search {
   padding-top: 1rem;
 }
@@ -57,4 +59,29 @@ header button {
   background-color: #3589a7;
   border-radius: 10px;
   padding: 0.2rem;
+}
+
+.searchButton{
+  background: none ;
+  box-shadow: none;
+  border-radius: 50px;
+  border: 0;
+  position: relative;
+  right: 47px;
+  cursor: pointer;
+}
+.searchButton>img{
+  width: 2rem;
+}
+.positionAsk{
+  background: none ;
+  box-shadow: none;
+  border-radius: 50px;
+  border: 0;
+  position: relative;
+  left: 47px;
+  cursor: pointer;
+}
+.positionAsk>img{
+  width: 2rem;
 }
