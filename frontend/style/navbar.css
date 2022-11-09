@@ -1,11 +1,6 @@
 .icon {
-  width: 3rem;
+  width: 6rem;
   padding: 0.3rem;
-  --margin: 0.4rem;
-}
-.icon1 {
-  width: 3rem;
-  padding-top: 1rem;
 }
 header {
   padding: 0.4rem;
@@ -14,20 +9,21 @@ header {
   background-color: #3589a7;
   align-content: center;
   position: sticky;
+  position: relative;
 }
 
 .search {
   border-radius: 50px;
   height: 2.4rem;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   flex: 1 ;
   border: 0;
   outline: none;
+  padding: 0.2rem 40px;
 }
-.nav-search {
-  padding-top: 1rem;
+.nav-search{
+  width: max-content;
+  margin: 0%;
 }
 header form {
   display: flex;
@@ -39,17 +35,15 @@ header form {
 }
 header form input {
   box-shadow: 3px 3px 10px black;
-  border-radius: 10px;
-  padding: 0.2rem;
   width: 45%;
-  outline: none;
 }
 .button_filter {
-  display: flex;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
-.button_filter svg {
-  display: inline;
-  margin-left: 3px;
+.button_filter>img {
+  width: 2.5rem;
 }
 header button {
   box-shadow: 3px 3px 10px black;
@@ -67,7 +61,7 @@ header button {
   border-radius: 50px;
   border: 0;
   position: relative;
-  right: 47px;
+  right: 45px;
   cursor: pointer;
 }
 .searchButton>img{
@@ -79,7 +73,7 @@ header button {
   border-radius: 50px;
   border: 0;
   position: relative;
-  left: 47px;
+  left: 45px;
   cursor: pointer;
 }
 .positionAsk>img{
