@@ -44,9 +44,7 @@
 
 .visible {
   display: initial;
-  height: 100%;
   overflow: auto;
-  height: 89vh;
 }
 
 .notVisible {
