@@ -11,12 +11,14 @@ function StationsInfo() {
   return (
     <div className="stationInfo">
       <h2 className="nameStation">Name Station</h2>
-      <img
-        className={isfavorite ? "isFavorite" : "notFavorite"}
-        onClick={handleFavorite}
-        src={isfavorite ? fullStar : emptyStar}
-        alt="state"
-      />
+      <button type="button" onClick={handleFavorite}>
+        <img
+          className={isfavorite ? "isFavorite" : "notFavorite"}
+          src={isfavorite ? fullStar : emptyStar}
+          alt="state"
+        />
+      </button>
+
       <p className="stateStation">6.8 KM</p>
       <p>
         <span className="circleColor" />

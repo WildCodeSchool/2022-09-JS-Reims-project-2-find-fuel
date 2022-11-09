@@ -13,7 +13,7 @@ function Search(props) {
     setVille(city);
   }
   function handleValidation() {
-    navigator.geolocation.getCurrentPosition(function (position) {
+    navigator.geolocation.getCurrentPosition(function coucou(position) {
       if (position) {
         axios
           .get(
