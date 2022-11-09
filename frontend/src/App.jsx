@@ -46,11 +46,11 @@ function App() {
       {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
       <Filter />
       <Leaflet fuelList={fuelList} />
-      <StationListing visible={visible} />
-      <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
+      <StationListing visible={visible} />
+      <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
 
       {location.loaded
         ? `Ta latitude : ${location.coordinates.lat} \n Ta longitude : ${location.coordinates.lng} \n Ta ville :${city} `
