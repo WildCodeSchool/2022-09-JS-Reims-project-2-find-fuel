@@ -10,7 +10,7 @@ function Search(props) {
 
   function handleClick(e) {
     e.preventDefault();
-    setVille(e.target.city.value);
+    setVille(city);
   }
   function handleValidation() {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -41,7 +41,7 @@ function Search(props) {
         placeholder="Recherche"
         onChange={(event) => setCity(event.target.value)}
       />
-      <button type="button" className="searchButton">
+      <button type="button" className="searchButton" onClick={(e) => handleClick(e)}>
         <img src={loupe} alt="Chercher" />
       </button>
       <button className="button_filter" type="button">
