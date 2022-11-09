@@ -1,19 +1,18 @@
 .FilterPage {
   background-color: black;
   opacity: 0.5;
-  width: 100vh;
+  width: 100%;
   height: 100vh;
   position: absolute;
   z-index: 1001;
-}
-.button_filter_close {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+}
+
+.button_filter_close {
+  margin-bottom: 20px;
   width: 60px;
   height: 60px;
   border-radius: 20px;
-  align-items: center;
-  position: absolute;
-  top: 90vh;
-  left: 20vh;
 }
