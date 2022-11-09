@@ -1,8 +1,10 @@
 import axios from "axios";
 
 let data;
+let dataSort;
+
 function sortData() {
-  const dataSort = [];
+  dataSort = [];
 
   data.forEach((fuel) => {
     const index = dataSort.findIndex((elt) => elt.id === fuel.fields.id);
@@ -31,12 +33,40 @@ function sortData() {
       });
     }
   });
+
   return dataSort;
 }
+
+function avreage() {
+  const sum = (station) => {
+    let somme = 0;
+    const num = station.carburants.length;
+
+    station.carburants.forEach((carburant) => {
+      somme += carburant.prix;
+    });
+
+    return somme / num;
+  };
+
+  dataSort.forEach((station, index) => {
+    const moyenne = sum(station);
+    dataSort[index]["moyenne"] = moyenne;
+  });
+}
+
+function sortAverage() {
+  avreage();
+  dataSort = dataSort.sort((a, b) => {
+    return a.moyenne - b.moyenne;
+  });
+}
+
 function getData(url, setData) {
   axios.get(url).then((response) => {
     data = response.data.records;
     setData(sortData());
+    sortAverage();
   });
 }
 export default getData;
