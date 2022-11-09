@@ -1,4 +1,4 @@
-.FilterPage {
+.filterPage {
   background-color: black;
   opacity: 0.5;
   width: 100%;
@@ -10,7 +10,7 @@
   align-items: flex-end;
 }
 
-.button_filter_close {
+.buttonFilterClose {
   margin-bottom: 20px;
   width: 60px;
   height: 60px;

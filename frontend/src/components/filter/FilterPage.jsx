@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 function FilterPage(props) {
   const { eventFilterButton } = props;
   return (
-    <div className="FilterPage">
+    <div className="filterPage">
       <button
         onClick={eventFilterButton}
-        className="button_filter_close"
+        className="buttonFilterClose"
         type="button"
       >
         X
