@@ -1,12 +1,19 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import PropTypes from "prop-types";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import PropTypes, { number } from "prop-types";
 import "../../../style/leaflet.css";
 
-function Leaflet(props) {
-  const { fuelList } = props;
+function ChangeView(props) {
+  const { center, zoom } = props;
+  const map = useMap();
+  map.setView(center, zoom);
+  return null;
+}
 
+function Leaflet(props) {
+  const { fuelList, geo } = props;
   return (
-    <MapContainer center={[49.259037, 4.031781]} zoom={12} scrollWheelZoom>
+    <MapContainer center={geo} zoom={12} scrollWheelZoom>
+      <ChangeView center={geo} zoom={12} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -57,5 +64,12 @@ Leaflet.propTypes = {
       ),
     }).isRequired
   ).isRequired,
+  geo: PropTypes.arrayOf(number).isRequired,
 };
+
+ChangeView.propTypes = {
+  center: PropTypes.arrayOf(number).isRequired,
+  zoom: PropTypes.number.isRequired,
+}.isRequired;
+
 export default Leaflet;
