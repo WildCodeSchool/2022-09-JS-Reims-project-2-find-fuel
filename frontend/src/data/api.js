@@ -3,7 +3,7 @@ import axios from "axios";
 let data;
 let dataSort;
 
-function sortData() {
+function sortData(city, setPointGeo) {
   dataSort = [];
 
   data.forEach((fuel) => {
@@ -34,7 +34,10 @@ function sortData() {
     }
   });
 
-  return dataSort;
+  const regex = new RegExp(`^${city.toLowerCase()}`, "g");
+  const dataSortCity = dataSort.filter((station) => station.ville.match(regex));
+  setPointGeo(dataSortCity[0].geom);
+  return dataSortCity;
 }
 
 function average() {
@@ -62,10 +65,10 @@ function sortAverage() {
   });
 }
 
-function getData(url, setData) {
+function getData(url, setData, city, setPointGeo) {
   axios.get(url).then((response) => {
     data = response.data.records;
-    setData(sortData());
+    setData(sortData(city, setPointGeo));
     sortAverage();
   });
 }

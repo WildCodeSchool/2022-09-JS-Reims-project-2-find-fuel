@@ -12,6 +12,7 @@ function Search(props) {
   function handleClick(e) {
     e.preventDefault();
     setVille(city);
+    setCity("");
   }
   function handleValidation() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -24,7 +25,6 @@ function Search(props) {
             const location =
               response.data.features["0"].properties.city.toLowerCase();
             setVille(location);
-            setCity(location);
           });
       }
     });
