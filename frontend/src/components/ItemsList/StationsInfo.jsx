@@ -1,19 +1,28 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import "../../../style/itemsList.css";
+import fullStar from "@assets/fullstar.png";
+import emptyStar from "@assets/emptystar.png";
 
 function StationsInfo(props) {
   const { station } = props;
+  const [isfavorite, setIsFavorite] = useState(false);
+  function handleFavorite() {
+    return setIsFavorite(!isfavorite);
+  }
   return (
     <div className="stationInfo">
       <h3 className="adressStation">
         {station.adresse} {station.ville}
       </h3>
-      <img
-        className="imageFavorite"
-        src="https://via.placeholder.com/20"
-        alt="state"
-      />
+      <button type="button" onClick={handleFavorite}>
+        <img
+          className={isfavorite ? "isFavorite" : "notFavorite"}
+          src={isfavorite ? fullStar : emptyStar}
+          alt="favorite"
+        />
+      </button>
+
       <p className="stateStation">6.8 KM</p>
       <p>
         <span className="circleColor" />
