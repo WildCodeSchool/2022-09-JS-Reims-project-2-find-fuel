@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import NavBar from "./components/navbar/NavBar";
 import StationListing from "./components/ItemsList/StationListing";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 import getData from "./data/api";
-import Geolocation from "./components/geolocation/Geolocation";
 import FilterPage from "./components/filter/FilterPage";
 import Filter from "./components/filter/Filter";
 
@@ -34,14 +32,6 @@ function App() {
     }
   }
 
-  const location = Geolocation();
-  if (location.loaded) {
-    axios
-      .get(
-        `https://api-adresse.data.gouv.fr/reverse/?lon=${location.coordinates.lng}&lat=${location.coordinates.lat}`
-      )
-      .then((response) => setCity(response.data.features["0"].properties.city));
-  }
   return (
     <div className="App">
       {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
