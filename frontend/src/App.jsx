@@ -46,11 +46,8 @@ function App() {
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
-      {visible ? <StationListing fuelList={fuelList} visible={visible} /> : " "}
+      {visible ? <StationListing fuelList={fuelList} /> : " "}
       <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
-      {location.loaded
-        ? `Ta latitude : ${location.coordinates.lat} \n Ta longitude : ${location.coordinates.lng} \n Ta ville :${city} `
-        : "Location data not available yet"}
     </div>
   );
 }

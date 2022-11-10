@@ -42,11 +42,6 @@
   margin-right: 5px;
 }
 
-.visible {
-  display: initial;
+.listing {
   overflow: auto;
-}
-
-.notVisible {
-  display: none;
 }

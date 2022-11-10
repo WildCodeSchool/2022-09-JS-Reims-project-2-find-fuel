@@ -3,9 +3,9 @@ import Station from "./Station";
 import "../../../style/itemsList.css";
 
 function StationListing(props) {
-  const { fuelList, visible } = props;
+  const { fuelList } = props;
   return (
-    <section className={visible ? "visible" : "notVisible"}>
+    <section className="listing">
       {fuelList.map((station) => (
         <Station key={station.id} station={station} />
       ))}
@@ -27,6 +27,5 @@ StationListing.propTypes = {
       ),
     }).isRequired
   ).isRequired,
-  visible: PropTypes.bool.isRequired,
 };
 export default StationListing;
