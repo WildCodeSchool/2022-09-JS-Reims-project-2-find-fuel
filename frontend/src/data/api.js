@@ -33,19 +33,40 @@ function sortData() {
       });
     }
   });
+
   return dataSort;
 }
 
-function getGeom(city) {
-  let ville = dataSort.find((elt) => (elt.ville = city));
-  return ville.geom;
+function average() {
+  const sum = (station) => {
+    let somme = 0;
+    const num = station.carburants.length;
+
+    station.carburants.forEach((carburant) => {
+      somme += carburant.prix;
+    });
+
+    return somme / num;
+  };
+
+  dataSort.forEach((station, index) => {
+    const moyenne = sum(station);
+    dataSort[index]["moyenne"] = moyenne;
+  });
 }
 
-function getData(url, setData, city, setPointGeo) {
+function sortAverage() {
+  average();
+  dataSort = dataSort.sort((a, b) => {
+    return a.moyenne - b.moyenne;
+  });
+}
+
+function getData(url, setData) {
   axios.get(url).then((response) => {
     data = response.data.records;
     setData(sortData());
-    setPointGeo(getGeom(city));
+    sortAverage();
   });
 }
 export default getData;
