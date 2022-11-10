@@ -49,7 +49,7 @@ function App() {
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
-      <StationListing visible={visible} />
+      <StationListing fuelList={fuelList} visible={visible} />
       <Leaflet fuelList={fuelList} geo={pointGeo} />
       <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
       {location.loaded
