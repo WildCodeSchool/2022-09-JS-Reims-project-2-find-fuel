@@ -50,7 +50,7 @@ function App() {
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
-      {visible ? <StationListing fuelList={fuelList} /> : " "}
+      {visible && <StationListing fuelList={fuelList} />}
       <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
     </div>
   );
