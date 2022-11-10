@@ -3,7 +3,7 @@ import axios from "axios";
 let data;
 let dataSort;
 
-function sortData() {
+function sortData(city) {
   dataSort = [];
 
   data.forEach((fuel) => {
@@ -13,7 +13,7 @@ function sortData() {
       dataSort.push({
         id: fuel.fields.id,
         adresse: fuel.fields.adresse,
-        ville: fuel.fields.ville,
+        ville: fuel.fields.ville.toLowerCase(),
         geom: fuel.fields.geom,
         carburants: [
           {
@@ -33,8 +33,8 @@ function sortData() {
       });
     }
   });
-
-  return dataSort;
+  let regex = new RegExp(`^${city.toLowerCase()}`, "g");
+  return dataSort.filter((station) => station.ville.match(regex));
 }
 
 function average() {
@@ -62,10 +62,10 @@ function sortAverage() {
   });
 }
 
-function getData(url, setData) {
+function getData(url, setData, city) {
   axios.get(url).then((response) => {
     data = response.data.records;
-    setData(sortData());
+    setData(sortData(city));
     sortAverage();
   });
 }
