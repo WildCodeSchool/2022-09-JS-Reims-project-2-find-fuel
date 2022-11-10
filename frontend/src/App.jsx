@@ -7,10 +7,15 @@ import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 import getData from "./data/api";
 import Geolocation from "./components/geolocation/Geolocation";
+import FilterPage from "./components/filter/FilterPage";
 
 function App() {
   const [fuelList, setFuelList] = useState([]);
   const [city, setCity] = useState("reims");
+  const [isShown, setIsShown] = useState(false);
+  const eventFilterButton = () => {
+    setIsShown(!isShown);
+  };
   const [pointGeo, setPointGeo] = useState([49.259037, 4.031781]);
   const [visible, setVisible] = useState(false);
 
@@ -39,13 +44,14 @@ function App() {
   }
   return (
     <div className="App">
+      {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
       <Filter />
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
       <StationListing visible={visible} />
       <Leaflet fuelList={fuelList} geo={pointGeo} />
-      <NavBar setVille={setCity} />
+      <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
       {location.loaded
         ? `Ta latitude : ${location.coordinates.lat} \n Ta longitude : ${location.coordinates.lng} \n Ta ville :${city} `
         : "Location data not available yet"}
