@@ -13,7 +13,7 @@ function sortData(city, setPointGeo) {
       dataSort.push({
         id: fuel.fields.id,
         adresse: fuel.fields.adresse,
-        ville: fuel.fields.ville,
+        ville: fuel.fields.ville.toLowerCase(),
         geom: fuel.fields.geom,
         carburants: [
           {
