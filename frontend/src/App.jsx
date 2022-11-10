@@ -6,6 +6,8 @@ import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 import getData from "./data/api";
 import Geolocation from "./components/geolocation/Geolocation";
+import FilterPage from "./components/filter/FilterPage";
+import Filter from "./components/filter/Filter";
 
 function App() {
   const [fuelList, setFuelList] = useState([]);
@@ -42,6 +44,8 @@ function App() {
   }
   return (
     <div className="App">
+      {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
+      <Filter />
       <Leaflet fuelList={fuelList} geo={pointGeo} />
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
