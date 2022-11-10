@@ -13,10 +13,10 @@
   width: 40px;
 }
 .fuelListing {
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   border: 1px solid black;
+  align-content: flex-start;
 }
 
 .fuelListing {

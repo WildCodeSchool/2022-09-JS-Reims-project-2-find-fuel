@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
       <Filter />
-      <StationListing visible={visible} />
+      <StationListing fuelList={fuelList} visible={visible} />
       <Leaflet fuelList={fuelList} geo={pointGeo} />
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
