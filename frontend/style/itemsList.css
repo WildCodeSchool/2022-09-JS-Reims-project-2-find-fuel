@@ -9,7 +9,7 @@
   position: relative;
   display: grid;
 }
-.stationInfo>img{
+.stationInfo > img {
   width: 40px;
 }
 .fuelListing {
@@ -44,14 +44,6 @@
   margin-right: 5px;
 }
 
-.visible {
-  display: initial;
+.listing {
   overflow: auto;
-}
-
-.notVisible {
-  display: none;
-}
-.isFavorite, .notFavorite{
-  width: 50px;
 }

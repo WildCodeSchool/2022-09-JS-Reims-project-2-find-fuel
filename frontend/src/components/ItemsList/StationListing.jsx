@@ -5,7 +5,7 @@ import "../../../style/itemsList.css";
 function StationListing(props) {
   const { fuelList } = props;
   return (
-    <section>
+    <section className="listing">
       {fuelList.map((station) => (
         <Station key={station.id} station={station} />
       ))}
