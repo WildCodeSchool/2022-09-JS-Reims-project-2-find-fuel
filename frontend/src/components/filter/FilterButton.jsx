@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import "../../../style/navbar.css";
+import funnel from "@assets/funnel.png";
 
 function FilterButton(props) {
   const { eventFilterButton } = props;
@@ -7,18 +9,10 @@ function FilterButton(props) {
     <div>
       <button
         onClick={eventFilterButton}
-        className="button_filter"
+        className="buttonFilter"
         type="button"
       >
-        Filtre
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="25"
-          fill="currentColor"
-          className="bi bi-arrow-up-circle"
-          viewBox="0 0 16 16"
-        />
+        <img src={funnel} alt="Filtre" />
       </button>
     </div>
   );

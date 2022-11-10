@@ -9,7 +9,9 @@
   position: relative;
   display: grid;
 }
-
+.stationInfo > img {
+  width: 40px;
+}
 .fuelListing {
   justify-content: space-between;
   flex-wrap: wrap;
