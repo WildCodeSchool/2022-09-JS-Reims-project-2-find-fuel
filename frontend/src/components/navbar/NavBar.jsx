@@ -11,8 +11,8 @@ function NavBar(props) {
     <header>
       <img className="icon" src={logo} alt="The logo" />
       <Search setVille={setVille} />
-      <button className="button_filter" type="button">
-        <img src={funnel} alt="FIltre" />
+      <button className="buttonFilter" type="button">
+        <img src={funnel} alt="Filtre" />
       </button>
     </header>
   );

@@ -15,7 +15,7 @@ function StationsInfo() {
         <img
           className={isfavorite ? "isFavorite" : "notFavorite"}
           src={isfavorite ? fullStar : emptyStar}
-          alt="state"
+          alt="favorite"
         />
       </button>
 
