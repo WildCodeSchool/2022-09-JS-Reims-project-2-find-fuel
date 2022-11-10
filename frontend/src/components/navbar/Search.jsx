@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import loupe from "@assets/loupe.png";
 import locationIcon from "@assets/localisation.png";
 import axios from "axios";
+import FilterButton from "../filter/FilterButton";
 
 function Search(props) {
-  const { setVille } = props;
+  const { setVille, eventFilterButton } = props;
   const [city, setCity] = useState("");
 
   function handleClick(e) {
@@ -48,10 +49,12 @@ function Search(props) {
       >
         <img src={loupe} alt="Chercher" />
       </button>
+      <FilterButton eventFilterButton={eventFilterButton} />
     </form>
   );
 }
 Search.propTypes = {
   setVille: PropTypes.func.isRequired,
+  eventFilterButton: PropTypes.func.isRequired,
 };
 export default Search;

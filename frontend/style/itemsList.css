@@ -46,11 +46,12 @@
 
 .visible {
   display: initial;
-  height: 100%;
   overflow: auto;
-  height: 89vh;
 }
 
 .notVisible {
   display: none;
+}
+.isFavorite, .notFavorite{
+  width: 50px;
 }
