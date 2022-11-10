@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Filter from "./components/filter/Filter";
 import NavBar from "./components/navbar/NavBar";
 import StationListing from "./components/ItemsList/StationListing";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
 import getData from "./data/api";
 import Geolocation from "./components/geolocation/Geolocation";
-import FilterPage from "./components/filter/FilterPage";
 
 function App() {
   const [fuelList, setFuelList] = useState([]);
