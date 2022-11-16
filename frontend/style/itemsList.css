@@ -27,7 +27,9 @@
   margin: 5px;
   height: auto;
 }
-
+.logoCarburant {
+  width: 3.5rem;
+}
 .imageFavorite {
   height: 20px;
   width: 20px;
