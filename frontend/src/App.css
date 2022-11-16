@@ -63,3 +63,18 @@ code {
 button {
   font-size: calc(10px + 2vmin);
 }
+
+@media screen and (min-width: 800px) {
+  .App{
+    display:grid;
+    grid-template-columns: 70vw 30vw;
+    grid-template-rows: 8vh 92vh;
+  }
+  .buttonList{
+    display:none;
+  }
+  .leaflet-container{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}

@@ -18,6 +18,8 @@ function App() {
   const [visible, setVisible] = useState(false);
   const [currentPosition, setCurrentPosition] = useState({});
 
+  const withScreen = window.screen.availWidth;
+
   const row = 200;
   const url = `https://data.economie.gouv.fr/api/records/1.0/search/?dataset=prix-carburants-fichier-instantane-test-ods-copie&q=${city}&rows=${row}&facet=id&facet=adresse&facet=ville&facet=prix_maj&facet=prix_nom&facet=services_service&facet=horaires_automate_24_24&refine.prix_maj=2022`;
 
@@ -32,13 +34,18 @@ function App() {
       setVisible(true);
     }
   }
+  React.useEffect(() => {
+    if (withScreen >= 800) {
+      changeView();
+    }
+  }, []);
 
   return (
     <div className="App">
       {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
       <Filter />
       <Leaflet fuelList={fuelList} geo={pointGeo} />
-      <button type="button" onClick={() => changeView()}>
+      <button type="button" className="buttonList" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
       {visible && (
