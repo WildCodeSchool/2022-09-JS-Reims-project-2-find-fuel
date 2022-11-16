@@ -2,6 +2,7 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import * as L from "leaflet";
 import PropTypes, { number } from "prop-types";
 import "../../../style/leaflet.css";
+import getLogo from "../../function/logoCarburant";
 
 function ChangeView(props) {
   const { center, zoom } = props;
@@ -59,7 +60,13 @@ function Leaflet(props) {
                   const date = new Date(elt.date);
                   return (
                     <tr key={elt.carburant}>
-                      <td>{elt.carburant}</td>
+                      <td>
+                        <img
+                          className="logoCarburant"
+                          src={getLogo(elt.carburantId)}
+                          alt="logo"
+                        />
+                      </td>
                       <td>{elt.prix} €</td>
                       <td>{`${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}</td>
                     </tr>
@@ -84,6 +91,7 @@ Leaflet.propTypes = {
         PropTypes.shape({
           carburant: PropTypes.string.isRequired,
           prix: PropTypes.number.isRequired,
+          carburantId: PropTypes.string.isRequired,
         })
       ),
     }).isRequired
