@@ -16,6 +16,7 @@ function App() {
   };
   const [pointGeo, setPointGeo] = useState([49.259037, 4.031781]);
   const [visible, setVisible] = useState(false);
+  const [currentPosition, setCurrentPosition] = useState({});
 
   const row = 200;
   const url = `https://data.economie.gouv.fr/api/records/1.0/search/?dataset=prix-carburants-fichier-instantane-test-ods-copie&q=${city}&rows=${row}&facet=id&facet=adresse&facet=ville&facet=prix_maj&facet=prix_nom&facet=services_service&facet=horaires_automate_24_24&refine.prix_maj=2022`;
@@ -40,8 +41,14 @@ function App() {
       <button type="button" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
-      {visible && <StationListing fuelList={fuelList} />}
-      <NavBar setVille={setCity} eventFilterButton={eventFilterButton} />
+      {visible && (
+        <StationListing fuelList={fuelList} currentPosition={currentPosition} />
+      )}
+      <NavBar
+        setCity={setCity}
+        eventFilterButton={eventFilterButton}
+        setCurrentPosition={setCurrentPosition}
+      />
     </div>
   );
 }
