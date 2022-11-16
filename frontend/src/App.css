@@ -63,3 +63,10 @@ code {
 button {
   font-size: calc(10px + 2vmin);
 }
+
+@media screen and (min-width: 800px) {
+  .App{
+    flex-direction: column-reverse;
+  }
+  
+}
