@@ -9,7 +9,6 @@ header {
   background-color: #3589a7;
   align-content: center;
   position: sticky;
-  position: relative;
 }
 
 .search {
@@ -22,7 +21,6 @@ header {
   padding: 0.2rem 40px;
 }
 .nav-search{
-  width: max-content;
   margin: 0%;
 }
 header form {
@@ -41,16 +39,17 @@ header form input {
   cursor: pointer;
   padding: 0;
   margin: 0;
+  height: 3rem;
 }
 .buttonFilter>img {
   width: 2.5rem;
+  padding-top: 0.2rem;
 }
 header button {
   box-shadow: 3px 3px 10px black;
   border-radius: 15px;
   border: 1px solid #265364;
   color: white;
-  background-color: #3589a7;
   border-radius: 10px;
   padding: 0.2rem;
 }
@@ -78,4 +77,8 @@ header button {
 }
 .positionAsk>img{
   width: 2rem;
+}
+@media screen and (min-width: 800px) {
+
+
 }
