@@ -1,18 +1,24 @@
 import PropTypes from "prop-types";
 import Station from "./Station";
 import "../../../style/itemsList.css";
+import CoordProps from "../../prop-types/CoordProps";
 
 function StationListing(props) {
-  const { fuelList } = props;
+  const { currentPosition, fuelList } = props;
   return (
     <section className="listing">
       {fuelList.map((station) => (
-        <Station key={station.id} station={station} />
+        <Station
+          key={station.id}
+          station={station}
+          currentPosition={currentPosition}
+        />
       ))}
     </section>
   );
 }
 StationListing.propTypes = {
+  currentPosition: CoordProps.isRequired,
   fuelList: PropTypes.arrayOf(
     PropTypes.shape({
       adresse: PropTypes.string.isRequired,

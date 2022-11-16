@@ -7,8 +7,8 @@ function Buttons() {
       <button type="button" className="filterButtons">
         Le moins cher
       </button>
-      <button type="button" className="filterButtons">
-        Le plus proche
+      <button type="button" className="ButtonDistance">
+        le plus proche
       </button>
       <button type="button" className="filterButtons">
         Favoris
