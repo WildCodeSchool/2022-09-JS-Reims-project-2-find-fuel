@@ -25,18 +25,28 @@ function StationsInfo(props) {
   ]);
   const [stationX, stationY, stationZ] = sphericToCartesian(station.geom);
 
+  function distance() {
+    if (Number.isNaN(myX) !== true) {
+      return `${
+        Math.round(
+          Math.sqrt(
+            (myX - stationX) ** 2 +
+              (myY - stationY) ** 2 +
+              (myZ - stationZ) ** 2
+          ) * 100
+        ) / 100
+      } KM`;
+    }
+    return "";
+  }
+
   return (
     <div className="stationInfo">
       <h3 className="adressStation">
         {station.adresse} {station.ville}
       </h3>
 
-      <p className="stateStation">
-        {Math.sqrt(
-          (myX - stationX) ** 2 + (myY - stationY) ** 2 + (myZ - stationZ) ** 2
-        )}{" "}
-        KM
-      </p>
+      <p className="stateStation">{distance()}</p>
       <p>
         <span className="circleColor" />
         Ouvert
