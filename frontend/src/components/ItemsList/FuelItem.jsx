@@ -7,13 +7,13 @@ function FuelItem(props) {
   const { fuel } = props;
 
   return (
-    <figure className="figure">
+    <figure className="fuelPrice">
       <img
         src={getLogo(fuel.carburantId)}
         alt="Fuels"
         className="logoCarburant"
       />
-      <figcaption>{fuel.prix}</figcaption>
+      <figcaption>{fuel.prix} €</figcaption>
     </figure>
   );
 }

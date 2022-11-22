@@ -50,7 +50,7 @@ function StationsInfo(props) {
         )}{" "}
         KM
       </p>
-      <p>
+      <p className="isOpenText">
         <span className="circleColor" />
         Ouvert
       </p>
