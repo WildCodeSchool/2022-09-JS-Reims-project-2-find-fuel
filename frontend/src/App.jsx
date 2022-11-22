@@ -10,10 +10,8 @@ function App() {
   const [fuelList, setFuelList] = useState([]);
   const [city, setCity] = useState("reims");
   const [isShown, setIsShown] = useState(false);
-  const [filterOn, setFilterOn] = useState(false);
   const eventFilterButton = () => {
     setIsShown(!isShown);
-    setFilterOn(true);
   };
   const [pointGeo, setPointGeo] = useState([49.259037, 4.031781]);
   const [visible, setVisible] = useState(false);
@@ -44,7 +42,7 @@ function App() {
   return (
     <div className="App">
       {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
-      <Leaflet filterOn={filterOn} fuelList={fuelList} geo={pointGeo} />
+      <Leaflet fuelList={fuelList} geo={pointGeo} />
       <button type="button" className="buttonList" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
