@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import CoordProps from "../../prop-types/CoordProps";
 import "../../../style/itemsList.css";
-import fullStar from "../../assets/fullstar.png";
-import emptyStar from "../../assets/emptystar.png";
 
 const earthRadiusInKm = 6371;
 const degreeToRadian = (degree) => (Math.PI * degree) / 180;
@@ -20,10 +18,6 @@ const sphericToCartesian = ([latitude, longitude]) => [
 
 function StationsInfo(props) {
   const { currentPosition, station } = props;
-  const [isfavorite, setIsFavorite] = useState(false);
-  function handleFavorite() {
-    return setIsFavorite(!isfavorite);
-  }
 
   const [myX, myY, myZ] = sphericToCartesian([
     currentPosition.latitude,
@@ -36,13 +30,6 @@ function StationsInfo(props) {
       <h3 className="adressStation">
         {station.adresse} {station.ville}
       </h3>
-      <button type="button" onClick={handleFavorite}>
-        <img
-          className={isfavorite ? "isFavorite" : "notFavorite"}
-          src={isfavorite ? fullStar : emptyStar}
-          alt="favorite"
-        />
-      </button>
 
       <p className="stateStation">
         {Math.sqrt(
