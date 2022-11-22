@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../style/filter.css";
 
 function Buttons() {
   return (
@@ -9,9 +8,6 @@ function Buttons() {
       </button>
       <button type="button" className="ButtonDistance">
         le plus proche
-      </button>
-      <button type="button" className="filterButtons">
-        Favoris
       </button>
     </div>
   );

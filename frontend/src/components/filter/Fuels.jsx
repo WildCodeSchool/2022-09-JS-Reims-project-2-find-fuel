@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../../style/filter.css";
 
 const fuelList = [
-  { nameFuel: "gasoil", isClicked: false },
-  { nameFuel: "gasoil +", isClicked: false },
-  { nameFuel: "E98", isClicked: false },
-  { nameFuel: "E95", isClicked: true },
+  { nameFuel: "Diesel", isClicked: false },
+  { nameFuel: "Ethanol E85", isClicked: false },
+  { nameFuel: "SP98", isClicked: false },
+  { nameFuel: "SP95 E5", isClicked: true },
+  { nameFuel: "SP95 E10", isClicked: false },
+  { nameFuel: "GPL", isClicked: false },
 ];
 
 function Fuel(props) {
