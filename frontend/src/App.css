@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.blur {
+  filter: blur(8px);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -65,15 +69,15 @@ button {
 }
 
 @media screen and (min-width: 800px) {
-  .App{
-    display:grid;
+  .App {
+    display: grid;
     grid-template-columns: 70vw 30vw;
     grid-template-rows: 8vh 92vh;
   }
-  .buttonList{
-    display:none;
+  .buttonList {
+    display: none;
   }
-  .leaflet-container{
+  .leaflet-container {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }

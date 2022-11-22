@@ -12,7 +12,7 @@ function ChangeView(props) {
 }
 
 function Leaflet(props) {
-  const { fuelList, geo } = props;
+  const { filterOn, fuelList, geo } = props;
   const LeafIcon = L.Icon.extend({
     options: {},
   });
@@ -34,7 +34,7 @@ function Leaflet(props) {
   }
   return (
     <MapContainer center={geo} zoom={12} scrollWheelZoom>
-      <ChangeView center={geo} zoom={12} />
+      <ChangeView className={filterOn && "blur"} center={geo} zoom={12} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -96,6 +96,7 @@ Leaflet.propTypes = {
       ),
     }).isRequired
   ).isRequired,
+  filterOn: PropTypes.bool.isRequired,
   geo: PropTypes.arrayOf(number).isRequired,
 };
 
