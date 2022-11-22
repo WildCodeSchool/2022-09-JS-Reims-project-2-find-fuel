@@ -38,7 +38,7 @@ function StationListing(props) {
   );
 }
 StationListing.propTypes = {
-  currentPosition: CoordProps.isRequired,
+  currentPosition: PropTypes.shape(CoordProps.isRequired).isRequired,
   fuelList: PropTypes.arrayOf(
     PropTypes.shape({
       adresse: PropTypes.string.isRequired,
