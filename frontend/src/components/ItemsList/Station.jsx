@@ -15,7 +15,7 @@ function Station(props) {
   );
 }
 Station.propTypes = {
-  currentPosition: CoordProps.isRequired,
+  currentPosition: PropTypes.shape(CoordProps.isRequired).isRequired,
   station: PropTypes.shape({
     adresse: PropTypes.string.isRequired,
     ville: PropTypes.string.isRequired,
