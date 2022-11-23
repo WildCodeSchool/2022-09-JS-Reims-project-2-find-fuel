@@ -9,8 +9,9 @@ tr th {
 }
 .popup {
   width: max-content;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
 }
 
 @media screen {
-  
 }

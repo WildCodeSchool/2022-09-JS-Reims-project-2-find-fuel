@@ -14,7 +14,7 @@ function StationsInfo(props) {
       <p className="stateStation">
         {station.distance && `${station.distance} KM`}
       </p>
-      <p>
+      <p className="isOpenText">
         <span className="circleColor" />
         Ouvert
       </p>
