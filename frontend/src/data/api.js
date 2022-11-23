@@ -82,7 +82,6 @@ export function sortFuel(fuelFilter, setFuelList) {
         newFuelList.push(station);
       }
 
-      // console.log(newFuelList.sort((a,b) => a.id - b.id));
     });
 
     setFuelList(newFuelList);
