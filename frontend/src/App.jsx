@@ -3,7 +3,7 @@ import NavBar from "./components/navbar/NavBar";
 import StationListing from "./components/ItemsList/StationListing";
 import Leaflet from "./components/map/Leaflet";
 import "./App.css";
-import getData from "./data/api";
+import getData, { sortFuel } from "./data/api";
 import FilterPage from "./components/filter/FilterPage";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
   const [pointGeo, setPointGeo] = useState([49.259037, 4.031781]);
   const [visible, setVisible] = useState(false);
   const [currentPosition, setCurrentPosition] = useState({});
+  const [fuelFilter, setFuelFilter] = useState([]);
 
   const withScreen = window.screen.availWidth;
 
@@ -38,16 +39,28 @@ function App() {
       changeView();
     }
   }, []);
-
+  React.useEffect(() => {
+    sortFuel(fuelFilter, setFuelList);
+  }, [fuelFilter]);
   return (
     <div className="App">
-      {isShown && <FilterPage eventFilterButton={eventFilterButton} />}
+      {isShown && (
+        <FilterPage
+          eventFilterButton={eventFilterButton}
+          setFuelFilter={setFuelFilter}
+          fuelFilter={fuelFilter}
+        />
+      )}
       <Leaflet fuelList={fuelList} geo={pointGeo} />
       <button type="button" className="buttonList" onClick={() => changeView()}>
         {visible ? "⇩" : "⇧"}
       </button>
       {visible && (
-        <StationListing fuelList={fuelList} currentPosition={currentPosition} />
+        <StationListing
+          fuelList={fuelList}
+          currentPosition={currentPosition}
+          fuelFilter={fuelFilter}
+        />
       )}
       <NavBar
         setCity={setCity}

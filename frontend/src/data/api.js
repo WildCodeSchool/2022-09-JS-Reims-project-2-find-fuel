@@ -54,7 +54,7 @@ function average() {
 
   dataSort.forEach((station, index) => {
     const moyenne = sum(station);
-    dataSort[index]['moyenne'] = moyenne;
+    dataSort[index].moyenne = moyenne;
   });
 }
 
@@ -63,6 +63,32 @@ function sortAverage() {
   dataSort = dataSort.sort((a, b) => {
     return a.moyenne - b.moyenne;
   });
+}
+
+export function sortFuel(fuelFilter, setFuelList) {
+  if (fuelFilter.length > 0) {
+    const newFuelList = [];
+    dataSort.forEach((station) => {
+      let count = 0;
+      fuelFilter.forEach((filter) => {
+        const fuel = station.carburants.find(
+          (element) => element.carburantId === filter
+        );
+        if (fuel) {
+          count += 1;
+        }
+      });
+      if (count === fuelFilter.length) {
+        newFuelList.push(station);
+      }
+
+      // console.log(newFuelList.sort((a,b) => a.id - b.id));
+    });
+
+    setFuelList(newFuelList);
+  } else if (dataSort) {
+    setFuelList(dataSort);
+  }
 }
 
 function getData(url, setData, city, setPointGeo) {
