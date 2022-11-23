@@ -8,11 +8,9 @@ import { distance } from "../../function/calculDistance";
 function StationListing(props) {
   const { currentPosition, fuelList } = props;
   const [fuelListSorted, setFuelListSorted] = useState([]);
-
   useEffect(() => {
+    const newFuelList = [];
     if (currentPosition.latitude != null) {
-      const newFuelList = [];
-
       fuelList.map((station) =>
         newFuelList.push({
           ...station,
