@@ -10,22 +10,11 @@ function StationsInfo(props) {
       <h3 className="adressStation">
         {station.adresse} {station.ville}
       </h3>
-<<<<<<< HEAD
-      <p className="stateStation">
-        {Math.sqrt(
-          (myX - stationX) ** 2 + (myY - stationY) ** 2 + (myZ - stationZ) ** 2
-        )}{" "}
-        KM
-      </p>
-      <p className="isOpenText">
-      <p className="stateStation">{distance()}</p>
-=======
 
       <p className="stateStation">
         {station.distance && `${station.distance} KM`}
       </p>
->>>>>>> main
-      <p>
+      <p className="isOpenText">
         <span className="circleColor" />
         Ouvert
       </p>
