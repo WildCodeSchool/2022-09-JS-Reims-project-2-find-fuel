@@ -1,5 +1,14 @@
 ## Project FindFuel 
 L'objectif de ce projet est de simplifier la recherche de station essence à l'aide de notre application basée sur le filtrage des besoins de nos utlisateurs et de l'utilisation d'une géolocalisation, qui permettra d'aller à l'essentiel en quelques secondes.
+Ce projet ambitieux a été réalisé en 6 semaines par 
+- [Valentin ![N|Solid](https://cdn.discordapp.com/attachments/1031477836617351209/1044914654050258954/linkedin.png)](https://www.linkedin.com/in/valentin-marlois-1b1464183/)
+- [Alexis ![N|Solid](https://cdn.discordapp.com/attachments/1031477836617351209/1044914654050258954/linkedin.png)](https://www.linkedin.com/in/alexis-durin-768435249/)
+- [Herimanana ![N|Solid](https://cdn.discordapp.com/attachments/1031477836617351209/1044914654050258954/linkedin.png)](https://www.linkedin.com/in/herimanana/)
+- [Charlotte ![N|Solid](https://cdn.discordapp.com/attachments/1031477836617351209/1044914654050258954/linkedin.png)](https://www.linkedin.com/in/charlotte-kieffer-023424221/)
+- [Pierre-Yves ![N|Solid](https://cdn.discordapp.com/attachments/1031477836617351209/1044914654050258954/linkedin.png)](https://www.linkedin.com/in/pierre-yves-gille-6723b7251/)
+- [Rémi ![N|Solid](https://cdn.discordapp.com/attachments/1031477836617351209/1044914654050258954/linkedin.png)](https://www.linkedin.com/in/r%C3%A9mi-lagreze/)
+
+
 
 ## Concept
 
