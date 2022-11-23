@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import CoordProps from "../../prop-types/CoordProps";
 import "../../../style/itemsList.css";
-import fullStar from "../../assets/fullstar.png";
-import emptyStar from "../../assets/emptystar.png";
 
 const earthRadiusInKm = 6371;
 const degreeToRadian = (degree) => (Math.PI * degree) / 180;
@@ -20,10 +18,6 @@ const sphericToCartesian = ([latitude, longitude]) => [
 
 function StationsInfo(props) {
   const { currentPosition, station } = props;
-  const [isfavorite, setIsFavorite] = useState(false);
-  function handleFavorite() {
-    return setIsFavorite(!isfavorite);
-  }
 
   const [myX, myY, myZ] = sphericToCartesian([
     currentPosition.latitude,
@@ -31,19 +25,26 @@ function StationsInfo(props) {
   ]);
   const [stationX, stationY, stationZ] = sphericToCartesian(station.geom);
 
+  function distance() {
+    if (Number.isNaN(myX) !== true) {
+      return `${
+        Math.round(
+          Math.sqrt(
+            (myX - stationX) ** 2 +
+              (myY - stationY) ** 2 +
+              (myZ - stationZ) ** 2
+          ) * 100
+        ) / 100
+      } KM`;
+    }
+    return "";
+  }
+
   return (
     <div className="stationInfo">
       <h3 className="adressStation">
         {station.adresse} {station.ville}
       </h3>
-      <button type="button" onClick={handleFavorite}>
-        <img
-          className={isfavorite ? "isFavorite" : "notFavorite"}
-          src={isfavorite ? fullStar : emptyStar}
-          alt="favorite"
-        />
-      </button>
-
       <p className="stateStation">
         {Math.sqrt(
           (myX - stationX) ** 2 + (myY - stationY) ** 2 + (myZ - stationZ) ** 2
@@ -51,6 +52,8 @@ function StationsInfo(props) {
         KM
       </p>
       <p className="isOpenText">
+      <p className="stateStation">{distance()}</p>
+      <p>
         <span className="circleColor" />
         Ouvert
       </p>
