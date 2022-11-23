@@ -1,5 +1,6 @@
 ## Project FindFuel 
 L'objectif de ce projet est de simplifier la recherche de station essence à l'aide de notre application basée sur le filtrage des besoins de nos utlisateurs et de l'utilisation d'une géolocalisation, qui permettra d'aller à l'essentiel en quelques secondes.
+Ce projet ambitieux fondé par Valentin, Charlotte, Heri, Alexis, Pierre-yves et Rémi a été réalisé en 6 semaines.
 
 ## Concept
 
