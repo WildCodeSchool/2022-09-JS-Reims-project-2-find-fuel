@@ -59,7 +59,7 @@ function average() {
 
   dataSort.forEach((station, index) => {
     const moyenne = sum(station);
-    dataSort[index][moyenne] = moyenne;
+    dataSort[index]['moyenne'] = moyenne;
   });
 }
 

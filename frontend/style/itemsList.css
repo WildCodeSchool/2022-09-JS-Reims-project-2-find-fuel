@@ -3,6 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid black;
   font-size: x-small;
+  font-family: "Rubik", sans-serif;
 }
 
 .stationInfo {
@@ -23,9 +24,10 @@
   display: flex;
   align-items: center;
 }
-.figure {
+.fuelPrice {
   margin: 5px;
   height: auto;
+  font-size: 14px;
 }
 .logoCarburant {
   width: 3.5rem;
@@ -64,6 +66,19 @@
 
 .listing {
   overflow: auto;
+}
+.adressStation {
+  font-size: 20px;
+  text-align: center;
+}
+.isOpenText {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.isOpenText,
+.stateStation {
+  font-size: 15px;
 }
 
 @media screen and (min-width: 800px) {
