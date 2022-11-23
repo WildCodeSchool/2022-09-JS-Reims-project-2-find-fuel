@@ -3,19 +3,17 @@ import React from "react";
 import FuelListing from "./FuelListing";
 import "../../../style/itemsList.css";
 import StationsInfo from "./StationsInfo";
-import CoordProps from "../../prop-types/CoordProps";
 
 function Station(props) {
-  const { currentPosition, station } = props;
+  const { station } = props;
   return (
     <div className="station">
-      <StationsInfo station={station} currentPosition={currentPosition} />
+      <StationsInfo station={station} />
       <FuelListing station={station} />
     </div>
   );
 }
 Station.propTypes = {
-  currentPosition: CoordProps.isRequired,
   station: PropTypes.shape({
     adresse: PropTypes.string.isRequired,
     ville: PropTypes.string.isRequired,
