@@ -72,7 +72,7 @@ export function sortFuel(fuelFilter, setFuelList) {
       let count = 0;
       fuelFilter.forEach((filter) => {
         const fuel = station.carburants.find(
-          (element) => element.carburantId === filter
+          (element) => parseInt(element.carburantId, 10) === filter
         );
         if (fuel) {
           count += 1;
@@ -81,7 +81,6 @@ export function sortFuel(fuelFilter, setFuelList) {
       if (count === fuelFilter.length) {
         newFuelList.push(station);
       }
-
     });
 
     setFuelList(newFuelList);
