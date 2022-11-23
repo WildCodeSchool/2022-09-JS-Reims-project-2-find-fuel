@@ -8,6 +8,10 @@ function sortData(city, setPointGeo) {
 
   data.forEach((fuel) => {
     const index = dataSort.findIndex((elt) => elt.id === fuel.fields.id);
+    const stationHoraires =
+      fuel.fields.horaires !== undefined
+        ? JSON.parse(fuel.fields.horaires)
+        : null;
 
     if (index < 0) {
       dataSort.push({
@@ -15,6 +19,7 @@ function sortData(city, setPointGeo) {
         adresse: fuel.fields.adresse,
         ville: fuel.fields.ville.toLowerCase(),
         geom: fuel.fields.geom,
+        horaires: stationHoraires,
         carburants: [
           {
             carburant: fuel.fields.prix_nom,
