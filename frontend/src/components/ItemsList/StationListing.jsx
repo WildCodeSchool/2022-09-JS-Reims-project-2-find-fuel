@@ -7,7 +7,7 @@ import { distance } from "../../function/calculDistance";
 
 function StationListing(props) {
   const { currentPosition, fuelList } = props;
-  const [fuelListSorted, setFuelListSorted] = useState(fuelList);
+  const [fuelListSorted, setFuelListSorted] = useState([]);
 
   useEffect(() => {
     if (currentPosition.latitude != null) {
@@ -26,6 +26,8 @@ function StationListing(props) {
       newFuelList.sort((a, b) => a.distance - b.distance);
 
       setFuelListSorted(newFuelList);
+    } else {
+      setFuelListSorted(fuelList);
     }
   }, [fuelList, currentPosition]);
 
