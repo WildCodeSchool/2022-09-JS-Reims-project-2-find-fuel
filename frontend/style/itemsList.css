@@ -44,10 +44,22 @@
 .circleColor {
   height: 20px;
   width: 20px;
-  background-color: rgb(49, 147, 41);
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
+  align-items: center;
+}
+
+.openColor {
+  background-color: rgb(49, 147, 41);
+}
+
+.closeColor {
+  background-color: rgb(199, 9, 9);
+}
+
+.unknownColor {
+  background-color: rgb(109, 110, 109);
 }
 
 .listing {
@@ -55,8 +67,7 @@
 }
 
 @media screen and (min-width: 800px) {
-  .listing{
+  .listing {
     width: 30vw;
   }
-  
 }
